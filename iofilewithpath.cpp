@@ -29,4 +29,28 @@ while (true){
 }
 //selesai dalam menulis sekarang tutup filenya
 outfile.close();
+
+//membuka file dalam mode membaca
+ifstream infile;
+
+//menunjuk ke sebuah file
+infile.open(NamaFIle + ".txt", ios::in);
+
+cout << endl << ">= Membuka dan membaca file " << endl;
+//jika file ada maka
+if (infile.is_open()){
+    //melakukan perulangan setiap baris
+    while (getline(infile, baris)){
+        //dan tampilkan disini
+        cout << baris << '\n';
+    }
+
+    //tutup file tsb setelah selesai
+    infile.close();
+}
+
+//jika tidak ditemukan file maka akan ditampilkan ini
+else cout << "UNable to open file";
+return 0;
+
 }
