@@ -7,7 +7,12 @@ int main(){
         throw 5; //melempaarkan sebuah integer maka
         cout << "Pernyataan tidak akan dieksekusi" << endl;
     }
-    catch {
+    catch (int a) {
+        //bklok ini akan dieksekusi 
+        cout << "Pengecualian akan dieksekusi" << endl;
+    }
+    catch (...){
         
     }
+
 }
