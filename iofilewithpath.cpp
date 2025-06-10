@@ -23,7 +23,7 @@ while (true){
     //mendapatkan setiap karakter dalam satu baris
     getline(cin, baris);
     //loop akan berhenti jika anda memasukkan karakter q
-    if (baris == 'q') break;
+    if (baris == "q") break;
     //menulis dan memassukkan nilai dari 'baris' ke dalam file
     outfile << baris << endl;
 }
@@ -34,7 +34,7 @@ outfile.close();
 ifstream infile;
 
 //menunjuk ke sebuah file
-infile.open(NamaFIle + ".txt", ios::in);
+infile.open(NamaFile + ".txt", ios::in);
 
 cout << endl << ">= Membuka dan membaca file " << endl;
 //jika file ada maka
